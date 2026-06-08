@@ -1,0 +1,28 @@
+---
+title: "Quiver"
+---
+
+Advanced mathematics for cybersecurity, presented as validated Haskell and Python lessons.
+
+## Lesson Categories
+
+- [Foundations](lessons/foundations/index.qmd) — Linear algebra, calculus, discrete math, probability
+- [Network Theory](lessons/network-theory/index.qmd) — Graph theory, flow networks, routing algorithms
+- [Complexity Theory](lessons/complexity-theory/index.qmd) — Computability, P vs NP, cryptographic hardness
+- [Machine Learning](lessons/ml/index.qmd) — Statistical learning, neural networks, optimization
+
+## How Lessons Work
+
+Each lesson ships as:
+
+- A **Haskell** file runnable via `runghc lesson.hs`
+- A **Python** file runnable via `uv run python lesson.py`
+- A **Quarto** page (this wiki) importing the LaTeX-rendered versions of both
+
+To scaffold a new lesson:
+
+```bash
+just new-lesson <topic> <name>
+just validate lessons/<topic>/<name>/lesson.hs
+just export-latex lessons/<topic>/<name>
+```

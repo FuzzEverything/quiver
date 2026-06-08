@@ -1,0 +1,9 @@
+---
+title: "Machine Learning"
+listing:
+  contents: "*/lesson.qmd"
+  type: table
+  fields: [title, description, date]
+---
+
+Statistical learning theory, neural networks, optimization, and adversarial ML.

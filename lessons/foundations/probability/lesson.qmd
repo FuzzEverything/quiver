@@ -1,0 +1,30 @@
+---
+title: "Lesson Title"
+description: "One-sentence description."
+categories: [topic]
+date: today
+---
+
+## Motivation
+
+_Why this concept matters for cybersecurity._
+
+## Haskell
+
+```{=latex}
+\input{exports/lesson-hs.tex}
+```
+
+```{.haskell filename="lesson.hs"}
+-- inline snippet for HTML rendering
+```
+
+## Python
+
+```{=latex}
+\input{exports/lesson-py.tex}
+```
+
+```{.python filename="lesson.py"}
+# inline snippet for HTML rendering
+```

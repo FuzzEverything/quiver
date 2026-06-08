@@ -1,0 +1,9 @@
+---
+title: "Complexity Theory"
+listing:
+  contents: "*/lesson.qmd"
+  type: table
+  fields: [title, description, date]
+---
+
+Computability, complexity classes, P vs NP, and cryptographic hardness assumptions.

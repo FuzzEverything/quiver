@@ -1,0 +1,9 @@
+---
+title: "Foundations"
+listing:
+  contents: "*/lesson.qmd"
+  type: table
+  fields: [title, description, date]
+---
+
+Core mathematical prerequisites: linear algebra, discrete math, probability, and calculus.

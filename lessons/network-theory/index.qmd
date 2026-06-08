@@ -1,0 +1,9 @@
+---
+title: "Network Theory"
+listing:
+  contents: "*/lesson.qmd"
+  type: table
+  fields: [title, description, date]
+---
+
+Graph theory, flow networks, routing algorithms, and their applications in network security.

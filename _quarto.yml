@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Quiver"
+  description: "Advanced mathematics for cybersecurity"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Lessons
+        menu:
+          - href: lessons/foundations/index.qmd
+            text: Foundations
+          - href: lessons/network-theory/index.qmd
+            text: Network Theory
+          - href: lessons/complexity-theory/index.qmd
+            text: Complexity Theory
+          - href: lessons/ml/index.qmd
+            text: Machine Learning
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-tools: true
+    highlight-style: github
+
+execute:
+  freeze: auto

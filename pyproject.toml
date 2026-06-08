@@ -1,0 +1,16 @@
+[project]
+name = "quiver"
+version = "0.1.0"
+description = "Advanced mathematics for cybersecurity — Haskell and Python lessons"
+requires-python = ">=3.11"
+dependencies = [
+    "jupyter>=1.1",
+    "nbformat>=5.10",
+    "nbconvert>=7.16",
+    "matplotlib>=3.9",
+    "numpy>=2.0",
+    "networkx>=3.3",
+]
+
+[tool.uv]
+package = false
