@@ -1,8 +1,23 @@
+# Quarto
 /.quarto/
 /_site/
+/jupyter_execute/
+
+# Python
 __pycache__/
-*.pyc
 .venv/
 *.egg-info/
+
+# Haskell
+*.o
+*.hi
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+
+# System
 .DS_Store
-exports/**/*.tex
+.env
