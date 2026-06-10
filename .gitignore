@@ -21,3 +21,5 @@ __pycache__/
 # System
 .DS_Store
 .env
+
+**/*.quarto_ipynb

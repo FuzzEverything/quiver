@@ -8,5 +8,5 @@ def example(n: int) -> int:
 
 
 if __name__ == "__main__":
-    print("Mathy lesson")
+    print("Quiver lesson")
     print(example(5))

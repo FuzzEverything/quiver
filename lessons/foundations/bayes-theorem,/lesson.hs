@@ -9,5 +9,5 @@ example n = n * n
 
 main :: IO ()
 main = do
-  putStrLn "Mathy lesson"
+  putStrLn "Quiver lesson"
   print (example 5)

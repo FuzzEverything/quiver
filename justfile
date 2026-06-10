@@ -15,14 +15,16 @@ validate path:
 export-latex lesson_dir lang='':
     #!/usr/bin/env bash
     set -e
+    # Wrap lesson source in a fenced code block; pandoc emits listings-compatible LaTeX.
+    export_via_pandoc() {
+        local lang="$1" src="$2" out="$3"
+        printf '%s\n' "~~~{.${lang}}" "$(cat "${src}")" '~~~' \
+            | pandoc -f markdown -t latex -o "${out}" --syntax-highlighting=idiomatic
+    }
     do_export() {
         case "$1" in
-            hs) pandoc "{{lesson_dir}}/lesson.hs" \
-                    -t latex -o "{{lesson_dir}}/exports/lesson-hs.tex" --listings ;;
-            py) uv run jupyter nbconvert --to latex \
-                    "{{lesson_dir}}/lesson.py" \
-                    --output-dir "{{lesson_dir}}/exports/" \
-                    --output "lesson-py" ;;
+            hs) export_via_pandoc haskell "{{lesson_dir}}/lesson.hs" "{{lesson_dir}}/exports/lesson-hs.tex" ;;
+            py) export_via_pandoc python "{{lesson_dir}}/lesson.py" "{{lesson_dir}}/exports/lesson-py.tex" ;;
         esac
     }
     case "{{lang}}" in

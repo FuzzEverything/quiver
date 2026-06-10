@@ -20,6 +20,9 @@ website:
           - href: lessons/ml/index.qmd
             text: Machine Learning
 
+filters:
+  - include-code-files
+
 format:
   html:
     theme: cosmo

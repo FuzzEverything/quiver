@@ -136,8 +136,7 @@ Keep it concrete: name a real algorithm or attack it enables or prevents.
 \input{exports/lesson-hs.tex}
 ```
 
-```{.haskell filename="lesson.hs"}
--- paste a representative trimmed snippet here for HTML rendering
+```{.haskell include="lesson.hs" filename="lesson.hs"}
 ```
 
 ## Python
@@ -146,8 +145,7 @@ Keep it concrete: name a real algorithm or attack it enables or prevents.
 \input{exports/lesson-py.tex}
 ```
 
-```{.python filename="lesson.py"}
-# paste a representative trimmed snippet here for HTML rendering
+```{.python include="lesson.py" filename="lesson.py"}
 ```
 
 ## Exercises   ← optional

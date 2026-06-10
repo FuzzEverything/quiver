@@ -1,0 +1,91 @@
+---
+title: "Kolmogorov's axioms"
+description: "non-negativity, normalization, and countable additivity"
+categories: [foundations,probability,statistics]
+date: today
+---
+
+## Motivation
+
+Networks and security operations run on incomplete information: traffic is stochastic, measurements are noisy, and conclusions about compromise or risk are necessarily uncertain. 
+This lesson defines the minimum formal apparatus — sample space, events, and a probability measure obeying Kolmogorov’s axioms. 
+
+
+## Kolmogorov axioms
+
+The standard **probability axioms** are the foundations of probability theory introduced by Andrey Kolmogorov in 1933. They define a probability measure on a sample space without assuming outcomes are equally likely, and they do not prescribe any particular interpretation of probability.
+
+Kolmogorov axioms assume:
+
+- a **sample space** $\Omega$, the set of all possible outcomes;
+- an **event space** $\mathcal{F}$, a $\sigma$-algebra on $\Omega$ (each event is a subset of $\Omega$);
+- a **probability measure** $P$, which assigns to each event $E \in \mathcal{F}$ its probability $P(E)$.
+
+Together, $(\Omega, \mathcal{F}, P)$ is a measure space; with $P(\Omega) = 1$ it is a **probability space**.
+
+**First axiom.** The probability of an event is a non-negative real number:
+
+$$
+P(E) \geq 0 \qquad \forall E \in \mathcal{F}.
+$$
+
+**Second axiom.** The probability that some elementary event in the sample space occurs is 1 (unit measure):
+
+$$
+P(\Omega) = 1.
+$$
+
+**Third axiom.** For any countable sequence of disjoint events $E_1, E_2, \ldots \in \mathcal{F}$ ($\sigma$-additivity):
+
+$$
+P\!\left(\bigcup_{i=1}^{\infty} E_i\right) = \sum_{i=1}^{\infty} P(E_i).
+$$
+
+
+## Example: simple network classification
+
+A sensor assigns each completed connection to one of three classes:
+
+$$
+\Omega = \{ \text{benign}, \text{malware}, \text{other} \}.
+$$
+
+Let $\mathcal{F}$ be the power set of $\Omega$, and $P$ be the probability measure defined by the sensor's accuracy:
+$$
+P(\text{benign}) = 0.9, \quad P(\text{malware}) = 0.05, \quad P(\text{other}) = 0.05.
+$$
+
+Then $P(\Omega) = 1$. Since the events are disjoint, we can use the third axiom to find the probability of the union of the events:
+
+$$
+P(\{\text{benign}, \text{malware}, \text{other}\}) = P(\text{benign}) + P(\text{malware}) + P(\text{other}) = 0.9 + 0.05 + 0.05 = 1.
+$$
+
+If we want to find the probability that the connection is malware or other, we can use the third axiom to find the probability of the union of the events:
+
+$$
+P(\{\text{malware}, \text{other}\}) = P(\text{malware}) + P(\text{other}) = 0.05 + 0.05 = 0.1.
+$$
+
+
+## Haskell
+
+```{=latex}
+\input{exports/lesson-hs.tex}
+```
+
+```{.haskell include="lesson.hs" filename="lesson.hs"}
+```
+
+## Python
+
+```{=latex}
+\input{exports/lesson-py.tex}
+```
+
+```{.python include="lesson.py" filename="lesson.py"}
+```
+
+## References
+
+[Kolmogorov axioms](https://en.wikipedia.org/wiki/Probability_axioms). *Wikipedia, The Free Encyclopedia*. Retrieved 8 June 2026.

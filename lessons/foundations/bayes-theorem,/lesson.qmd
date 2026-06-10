@@ -15,8 +15,7 @@ _Why this concept matters for cybersecurity._
 \input{exports/lesson-hs.tex}
 ```
 
-```{.haskell filename="lesson.hs"}
--- inline snippet for HTML rendering
+```{.haskell include="lesson.hs" filename="lesson.hs"}
 ```
 
 ## Python
@@ -25,6 +24,5 @@ _Why this concept matters for cybersecurity._
 \input{exports/lesson-py.tex}
 ```
 
-```{.python filename="lesson.py"}
-# inline snippet for HTML rendering
+```{.python include="lesson.py" filename="lesson.py"}
 ```
